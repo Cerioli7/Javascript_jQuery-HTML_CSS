@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+	    document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector("#nameform").onsubmit = function(e) {
+
+		  	e.preventDefault()
+
+		    const name = document.querySelector("#nameinput").value;
+		    alert('Il tuo nome è ' + name)
+
+		    document.querySelector("#nameinput").value = ""
+		    //return false;
+		  };
+	    })
+	  </script>
+	</head>
+	<body>
+		<form id="nameform">
+			<input id="nameinput" type="text" placeholder="Inserisci il tuo nome!">
+			<input type="submit">
+		</form>
+	</body>
+</html>

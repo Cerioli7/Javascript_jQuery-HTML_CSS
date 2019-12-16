@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+
+		function getCurrencyRate(currency) {
+			console.log(currency);
+
+			let url = "https://api.exchangeratesapi.io/latest?symbols=" + currency;
+
+			/* const config = {
+				method: "POST", // "POST", "PUT"
+				body: JSON.stringify(data)
+			} */
+			// fetch(url, config)
+
+			fetch(url).then(function(response) {
+					console.log("Status: ", response.status)
+					response.json().then(function(data) {
+							console.log("Fetch Result: ", data)
+						})
+				})
+
+		}
+		getCurrencyRate("USD");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

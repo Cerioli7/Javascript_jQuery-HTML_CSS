@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+	<style media="screen">
+		#box {
+			width: 200px;
+			height: 200px;
+			border: 3px solid black;
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+
+
+			// Cambia il colore di sfondo del box a "red"
+			document.querySelectorAll('.color-change').forEach( button => {
+				button.onclick = () => {
+					document.querySelector("#box").style.background = button.dataset.color;
+				}
+			})
+
+
+			/*// Cambia il colore di sfondo del box a "blue"
+			document.querySelector('#blue').onclick = function() {
+				document.querySelector('#box').style.background = 'blue';
+
+
+			// Cambia il colore di sfondo del box a "grey"
+			document.querySelector('#grey').onclick = function() {
+				document.querySelector('#box').style.background = 'grey';
+			}
+			}*/
+		});
+	</script>
+	<title>Box Colorato</title>
+</head>
+<body>
+	<div id="box">
+	</div>
+	<br>
+	<button class="color-change" data-color="red">Rosso</button>
+	<button class="color-change" data-color="blue">Blu</button>
+	<button class="color-change" data-color="grey">Grigio</button>
+</body>
+</html>
